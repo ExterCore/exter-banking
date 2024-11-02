@@ -6,9 +6,9 @@ author 'sobing'
 
 description 'exter-banking script | NP 4.0 Inspired'
 
-version '1.0'
+version '1.2'
 
-ui_page 'UI/index.html'
+ui_page 'web/index.html'
 
 shared_script 'Config.lua'
 
@@ -17,11 +17,11 @@ client_script 'Client/*.lua'
 server_script 'Server/*.lua'
 
 files {
-    'UI/index.html',
-    'UI/styles/*.css',
-    'UI/scripts/*.js',
-    'UI/images/*.png',
-	'UI/images/*.jpg',
-    'UI/images/*.svg',
-	'UI/fonts/*.ttf'
+    'web/index.html',
+    'web/styles/*.css',
+    'web/scripts/*.js',
+    'web/images/*.png',
+    'web/images/*.jpg',
+    'web/images/*.svg',
+    'web/fonts/*.ttf'
 }
