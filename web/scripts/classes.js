@@ -35,7 +35,7 @@ class Transaction {
   }
 
   GetDescription() {
-    if (this.description?.trim()) {
+    if (this.description.trim()) {
       return (
         this.description +
         `${(() => {
