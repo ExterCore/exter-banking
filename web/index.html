@@ -15,21 +15,20 @@
     <title>exter-banking - NP 4.0 Inspired</title>
   </head>
   <body>
-    <div style="display: none" class="background-fade"></div>
     <div style="display: none" class="container">
       <div style="display: none" class="screen-fade"></div>
 
       <div class="background">
         <div class="background-dots"></div>
         <div
-          style="right: 0; top: -10vh; transform: scaleX(1.3)"
+          style="left: 0; top: -10vh; transform: scaleX(1.3)"
           class="background-lights"
         >
           <div class="background-light"></div>
           <div class="background-light"></div>
         </div>
         <div
-          style="left: 0; bottom: -10vh; transform: scaleX(1.4) scaleY(0.7)"
+          style="right: 0; bottom: -10vh; transform: scaleX(1.4) scaleY(0.7)"
           class="background-lights"
         >
           <div class="background-light"></div>
@@ -38,7 +37,7 @@
       </div>
       <div style="display: none" class="loadingscreen">
         <div class="loadingscreen-inner">
-          <h1 class="text-glow">LosSantos Bank</h1>
+          <h1 class="text-glow">Banking</h1>
           <p>Is loading now...</p>
         </div>
         <div class="loadingscreen-progress">
@@ -98,10 +97,14 @@
       <div style="display: none" class="wrapper">
         <div class="top-bar">
           <div class="title">
-            <h2 class="text-glow-2">Los Santos Bank</h2>
-            <p>Welcome, have a good day!</p>
+            <h2 class="text-glow-2">Banking</h2>
+            <p>System</p>
           </div>
           <div class="buttons">
+            <div class="button">
+              <div class="button-label">Export</div>
+              <div class="button-key"><img src="images/export.svg" /></div>
+            </div>
             <div id="exit-btn" class="button">
               <div class="button-label">Exit</div>
               <div class="button-key">Escape</div>
@@ -109,30 +112,21 @@
           </div>
         </div>
         <div class="main-section">
+          <div class="accounts">
+            <div class="create-account">
+              <div class="create-account-question">
+                Do you want to create account?
+              </div>
+              <div
+                onclick="ShowModal('create-account')"
+                class="create-account-btn"
+              >
+                Create Account
+              </div>
+            </div>
+          </div>
           <div class="selected-account">
             <div class="selected-account-account">
-              <div class="selected-account-actions">
-                <div
-                  onclick="ShowModal('deposit');"
-                  class="selected-account-account-action-btn"
-                >
-                  Deposit
-                </div>
-                <div
-                  onclick="ShowModal('transfer');"
-                  style="background-color: #292820; color: #c5b21f"
-                  class="selected-account-account-action-btn"
-                >
-                  Transfer
-                </div>
-                <div
-                  onclick="ShowModal('withdraw');"
-                  style="background-color: #22172c; color: #944250"
-                  class="selected-account-account-action-btn"
-                >
-                  Withdraw
-                </div>
-              </div>
               <div class="selected-account-account-details">
                 <h4 id="selected-account-name">Default Account</h4>
                 <p id="selected-account-balance">$0.00</p>
@@ -147,22 +141,31 @@
                   Delete Account
                 </p>
               </div>
+              <div class="selected-account-actions">
+                <div
+                  onclick="ShowModal('deposit');"
+                  class="selected-account-account-action-btn"
+                >
+                  Deposit
+                </div>
+                <div
+                  onclick="ShowModal('transfer');"
+                  style="background-color: #272f24; color: #c2cc37"
+                  class="selected-account-account-action-btn"
+                >
+                  Transfer
+                </div>
+                <div
+                  onclick="ShowModal('withdraw');"
+                  style="background-color: #22172c; color: #944250"
+                  class="selected-account-account-action-btn"
+                >
+                  Withdraw
+                </div>
+              </div>
             </div>
 
             <div class="selected-account-transactions"></div>
-          </div>
-          <div class="accounts">
-            <div class="create-account">
-              <div class="create-account-question">
-                Do you want to create account?
-              </div>
-              <div
-                onclick="ShowModal('create-account')"
-                class="create-account-btn"
-              >
-                Create Account
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -477,7 +480,7 @@
         <div class="modal-select-textinput">
           <p>Account ID</p>
           <div class="modal-select-textinput-inner">
-            <input id="account-id" type="text" value="0" />
+            <input id="account-id" type="number" value="0" />
           </div>
         </div>
 
