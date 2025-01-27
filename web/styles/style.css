@@ -23,15 +23,6 @@
   background: #223755;
 }
 
-.background-fade {
-  position: fixed;
-  height: 100vh;
-  width: 100vw;
-  background-color: rgba(0, 0, 0, 0.226);
-  z-index: 100;
-  animation: FadeIn 500ms forwards;
-}
-
 body {
   margin: 0;
   padding: 0;
@@ -69,7 +60,6 @@ body {
   height: 100%;
   width: 100%;
   background: url("../images/background-2.png") center;
-  transform: scaleX(-1);
   background-repeat: repeat;
   background-size: cover;
   position: absolute;
@@ -86,7 +76,7 @@ body {
 .background-light:nth-child(1) {
   width: 30vh;
   height: 30vh;
-  background: #b10f7c;
+  background: #4b26ce;
   filter: blur(12vh);
   position: relative;
   z-index: 100;
@@ -95,7 +85,7 @@ body {
 .background-light:nth-child(2) {
   width: 30vh;
   height: 30vh;
-  background: #0371f0;
+  background: #125d70;
   filter: blur(12vh);
 }
 
@@ -110,7 +100,6 @@ body {
   align-items: center;
   justify-content: center;
   user-select: none;
-  z-index: 120;
 }
 
 .loadingscreen {
@@ -140,18 +129,14 @@ body {
 }
 
 .text-glow {
-  color: #2de5eb;
-  text-shadow: 0 0 2vh #2dcfeb;
+  color: #06ae83;
+  text-shadow: 0 0 2vh #06ae83;
   font-weight: bold;
 }
 
 .text-glow-2 {
-  /* color: #2debba;
+  color: #2debba;
   text-shadow: 0 0 2vh #2debba;
-  font-weight: bold; */
-
-  color: #2de5eb;
-  text-shadow: 0 0 2vh #2dcfeb;
   font-weight: bold;
 }
 
@@ -204,13 +189,13 @@ body {
 }
 
 .button {
-  background-color: #151b36;
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 11vh;
   height: 2.8vh;
   color: #6a708a;
+  border: 0.1vh solid #151b36;
   font-family: "Gilroy-Regular";
   font-weight: 600;
   overflow: hidden;
@@ -269,13 +254,11 @@ body {
   border-radius: 1vh;
   overflow: hidden;
   position: relative;
-  border: 0.1vh solid #36304b9d;
+  border: 0.1vh solid #36304b;
 }
 
 .account-card img {
   width: 100%;
-  height: 100%;
-  filter: contrast(1.25) blur(1.1vh);
 }
 
 .account-card-text {
@@ -285,7 +268,6 @@ body {
   left: 0;
   top: 0;
   font-family: "Gilroy-Regular";
-  z-index: 100;
 }
 
 .account-card-bank {
@@ -374,8 +356,6 @@ body {
   box-sizing: border-box;
   position: relative;
   margin-top: 0.7vh;
-  padding-left: 0;
-  margin-left: 0;
 }
 
 .selected-account::after {
@@ -400,9 +380,6 @@ body {
 .selected-account-account-details {
   width: 60%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
 }
 
 .selected-account-account-details h4 {
@@ -438,7 +415,7 @@ body {
   justify-content: center;
   background-color: #083543b2;
   font-weight: 700;
-  color: #2de5eb;
+  color: #019579;
   margin: 1vh 0vh;
   cursor: pointer;
   padding: 1vh 1vh;
@@ -468,7 +445,7 @@ body {
 }
 
 .account-details-selected {
-  background: linear-gradient(0deg, #02222c, #2de5eb, #02222c) !important;
+  background: linear-gradient(0deg, #02222c, #057685, #02222c) !important;
 }
 
 .account-details-user {
@@ -495,7 +472,7 @@ body {
 .box-glow {
   position: absolute;
   z-index: -1;
-  background-color: #2ce3e9c4;
+  background-color: #0bf7bca1;
   filter: blur(0.6vh);
 }
 
@@ -509,14 +486,14 @@ body {
 
 .account-details-user-accountname {
   font-family: "Gilroy-SemiBold";
-  color: #e6e6e6;
+  color: #33ceb5;
   font-size: 1.2vh;
 }
 
 .account-details-user-accountid {
   font-family: "Gilroy-Regular";
   font-size: 1vh;
-  color: #e6e6e6;
+  color: #a3a3a3;
   margin-top: 0.35vh;
 }
 
@@ -526,7 +503,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  color: #e6e6e6;
+  color: #3bb8a4;
   padding-right: 1vh;
   font-size: 1.6vh;
 }
@@ -618,7 +595,6 @@ body {
 .modal-title {
   font-size: 2vh;
   margin-bottom: 1vh;
-  text-align: center;
 }
 
 .modal-description {
@@ -729,7 +705,7 @@ body {
   justify-content: center;
   background-color: #083543b2;
   font-weight: 700;
-  color: #4aedf3;
+  color: #37b6a0;
   font-size: 1.3vh;
   margin-top: 3vh;
 }
