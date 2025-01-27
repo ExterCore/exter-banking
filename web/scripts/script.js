@@ -87,11 +87,7 @@ function PushTransactions(transactions) {
 
   if (transactions?.length == 0) {
     $(".selected-account-transactions").append(
-      `<div style="height: 100%; width: 100%; display: flex; align-items: center; justify-content: center; color: #818594;">${
-        SelectedAccount?.id?.startsWith("si:")
-          ? "Transactions cannot be displayed for this account"
-          : "No transactions found"
-      }</div>`
+      `<div style="height: 100%; width: 100%; display: flex; align-items: center; justify-content: center; color: #818594;">No transactions found</div>`
     );
     return;
   }
@@ -160,7 +156,7 @@ function LoadAccounts() {
         <div class="account-card">
           <div class="account-card-text">
             <div class="account-card-bank">
-              <div>Los Santos</div>
+              <div>San Andreas</div>
               <div>
                 B &nbsp;&nbsp;a &nbsp;&nbsp;n &nbsp;&nbsp;k &nbsp;&nbsp;i
                 &nbsp;n &nbsp;&nbsp;g
@@ -172,11 +168,11 @@ function LoadAccounts() {
               <div id="account-card-id">${account.id}</div>
             </div>
           </div>
-          <img src="images/card2.jpg" />
+          <img src="images/card.jpg" />
         </div>
-        <div data-accountid="${account.id}" onclick="SelectAccount('${
+        <div data-accountid="${account.id}" onclick="SelectAccount(${
       account.id
-    }');" class="account-details">
+    });" class="account-details">
           <div class="account-details-background"></div>
           <div class="account-details-user">
             <div class="account-details-user-icon">
@@ -239,9 +235,6 @@ function SelectAccount(accountId) {
   $("#selected-account-name").text(SelectedAccount.name);
   $("#selected-account-balance").text(SelectedAccount.PrettyPrintBalance());
   $("#selected-account-id").text(SelectedAccount.id);
-  $("#selected-account-type").text(
-    account?.id?.startsWith("si:") ? "Default" : "Custom"
-  );
 
   $(`.account-details[data-accountid='${account.id}']`)
     .children(".account-details-background")
@@ -424,13 +417,11 @@ window.addEventListener("message", ({ data }) => {
 
       LoadBankingMenu();
       $(".container").fadeIn(450);
-      $(".background-fade").removeAttr("style");
       break;
 
     case "hideMenu":
       ShowModal(null);
       $(".container").fadeOut(100);
-      $(".background-fade").css("display", "none");
       $(".wrapper").fadeOut(100);
       break;
 
