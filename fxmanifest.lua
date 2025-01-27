@@ -6,7 +6,7 @@ author 'sobing'
 
 description 'exter-banking script | NP 4.0 Inspired'
 
-version '1.2'
+version '2.0'
 
 ui_page 'web/index.html'
 
