@@ -10,7 +10,7 @@ version '2.0'
 
 ui_page 'web/index.html'
 
-shared_script 'Config.lua'
+shared_script 'shared/Config.lua'
 
 client_script 'Client/*.lua'
 
